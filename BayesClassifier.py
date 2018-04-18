@@ -33,7 +33,7 @@ class GaussianBayesClassifier:
         for i in range(0, mean_vector.size()):
             for j in range(0, mean_vector.size()):
                 if(i==j):
-		            covariance_matrix[i][j] =  stddev_vector[0][j]**2;
+                    covariance_matrix[i][j] =  stddev_vector[0][j]**2;
                 elif( covariance_matrix[i][j] == 0):
                     covariance_matrix[i][j] = sum([(ith_value1-mean1)*(ith_value2-mean2)
                      for ith_value1, ith_value2  in zip(data_vector[0][i], data_vector[0][j])])/float(len(data1)-1)
